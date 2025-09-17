@@ -5,7 +5,7 @@ const Aluno = require('./Aluno')
 const Endereco = require('./Endereco')
 const Telefone = require('./Telefone')
 
-/* teste pessoa
+//teste pessoa
 
 const x = new Pessoa();
 var resposta = x.setNome("Leandro");
@@ -33,7 +33,7 @@ else{
   console.log("Data de nascimento vazia!")
 }
 
- teste PF
+//teste PF
 
 const y = new PF();
 var resposta = y.setNome('Leandro');
@@ -58,7 +58,7 @@ else{
   console.log("CPF Invalido.")
 }
 
-teste PJ
+//teste PJ
 
 const z = new PJ();
 
@@ -67,7 +67,7 @@ console.log(resposta);
 resposta = z.setEmail('teste@teste.com');
 console.log(resposta);
 
-teste Aluno
+//teste Aluno
 
 const a = new Aluno();
 
@@ -77,7 +77,7 @@ resposta = a.setCurso('ADS');
 console.log(a.getMatricula);
 console.log(a.getCurso);
 
-teste Endereco*/
+//teste Endereco
 
 const end = new Endereco();
 end.setLogradouro('QNM 40')

@@ -7,6 +7,7 @@ class Pessoa{
   #nascimento;
   //Relacionamento N-1 Endereco
   #endereco;
+
   setEndereco(endereco){
     if(endereco instanceof Endereco){
       this.#endereco = endereco;
@@ -20,8 +21,11 @@ class Pessoa{
   getEndereco(){
     return this.#endereco;
   }
+
   //Relacionamento N-N telefone
+  
   #telefones = []
+
   addTelefone(telefone){
     if(telefone instanceof Telefone){
       this.#telefones.push(telefone);

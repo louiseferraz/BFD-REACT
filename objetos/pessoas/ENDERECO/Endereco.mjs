@@ -4,6 +4,7 @@ export default class Endereco {
   #bairro;
   #cidade;
   #uf;
+  #regiao;
 
   async setCep(cep) {
     const url = `https://viacep.com.br/ws/${cep}/json/`;
@@ -24,6 +25,7 @@ export default class Endereco {
     this.#bairro = dados.bairro;
     this.#cidade = dados.localidade;
     this.#uf = dados.uf;
+    this.#regiao = dados.regiao;
   }
 
   getCep() {
@@ -44,6 +46,10 @@ export default class Endereco {
 
   getUf() {
     return this.#uf;
+  }
+
+  getRegiao() {
+    return this.#regiao;
   }
 }
 

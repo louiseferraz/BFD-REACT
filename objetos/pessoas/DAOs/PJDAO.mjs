@@ -42,3 +42,5 @@ export default class PJDAO{
     return JSON.parse(localStorage.getItem("pj"));
   }
 }
+
+//module.exports = PJDAO;

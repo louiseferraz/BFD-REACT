@@ -3,11 +3,10 @@ const PF = require('./PF');
 class Aluno extends PF{
   #matricula;
   #curso;
-  #disciplina;
-
+  
   setMatricula(matricula){
     if(matricula){
-      if((matricula.startswith('20')) && (matricula.length===8)){
+      if((matricula.length===8) && (matricula.startswith('20'))){
       this.#matricula = matricula;
       return true;}
       else{
