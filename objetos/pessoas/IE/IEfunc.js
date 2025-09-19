@@ -1,10 +1,15 @@
 const PJ = require('../PJ');
+const PF = require('../PF');
+const Aluno = require('../Aluno');
+
 function IE() {
     let dados = {
       numero: null,
       estado: null,
       dataRegistro: null,
-      pj: null
+      pj: null,
+      pf: null,
+      aluno: null
     };
   
     function setNumero(numero) {
@@ -33,12 +38,32 @@ function IE() {
       return false;
     }
     function getPJ() { return dados.pj; }
+
+    function setPF(pf) {
+      if (pf) {
+        dados.pf = pf; 
+        return true;
+      }
+      return false;
+    }
+    function getPF() { return dados.pf; }
+
+    function setAluno(aluno) {
+      if (aluno) {
+        dados.aluno = aluno; 
+        return true;
+      }
+      return false;
+    }
+    function getAluno() { return dados.aluno; }
   
     return {
       setNumero, getNumero,
       setEstado, getEstado,
       setDataRegistro, getDataRegistro,
-      setPJ, getPJ
+      setPJ, getPJ,
+      setPF, getPF,
+      setAluno, getAluno
     };
   
   }

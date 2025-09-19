@@ -1,10 +1,14 @@
+import Aluno from "../Aluno.js";
 import PJ from "../PJ.js";
+import PF from "../PF.js";
 
 export class IEclss {
   #numero;
   #estado;
   #dataRegistro;
   #pj;
+  #pf;
+  #aluno;
 
   setNumero(numero) {
     if (numero) {
@@ -52,10 +56,32 @@ export class IEclss {
   getPJ() { 
     return this.#pj; 
   }
+  
+  setPF(pf) { 
+    if (pf instanceof PF) { this.#pf = pf; return true; 
+    } 
+    else{
+      return false; 
+    }
+  }
+  getPF() { 
+    return this.#pf; 
+  }
+
+  setAluno(aluno) { 
+    if (aluno instanceof Aluno) { this.#aluno = aluno; return true; 
+    } 
+    else{
+      return false; 
+    }
+  }
+  getAluno() { 
+    return this.#aluno; 
+  }
 }
   export default function IEfunc() {
     let dados = { 
-      numero: null, estado: null, dataRegistro: null, pj: null 
+      numero: null, estado: null, dataRegistro: null, pj: null ,pf: null, aluno: null,
     };
 
     function setNumero(numero) { 
@@ -95,7 +121,23 @@ export class IEclss {
       return dados.pj; 
     }
 
-    return { setNumero, getNumero, setEstado, getEstado, setDataRegistro, getDataRegistro, setPJ, getPJ };
+    function setPF(pf) { 
+      if (pf instanceof PF || (pf && pf.cpf)) { 
+        dados.pf = pf; return true; } return false; 
+      }
+    function getPF() { 
+      return dados.pf; 
+    }
+
+    function setAluno(aluno) { 
+      if (aluno instanceof Aluno || (aluno && aluno.cpf)) { 
+        dados.aluno = aluno; return true; } return false; 
+      }
+    function getAluno() { 
+      return dados.aluno; 
+    }
+
+    return { setNumero, getNumero, setEstado, getEstado, setDataRegistro, getDataRegistro, setPJ, getPJ, setPF, getPF, setAluno, getAluno,};
 }
 
   export const IEjson = {
@@ -103,6 +145,8 @@ export class IEclss {
     estado: null,
     dataRegistro: null,
     pj: null,
+    pf: null,
+    aluno: null,
   
     setNumero(numero) { 
       if (numero) { 
@@ -137,6 +181,22 @@ export class IEclss {
       },
     getPJ() { 
       return this.pj; 
+    },
+
+    setPF(pf) { 
+      if (pf instanceof PF || (pf && pf.cpf)) { 
+        dados.pf = pf; return true; } return false; 
+      },
+    getPF() { 
+      return this.pf; 
+    },
+
+    setAluno(aluno) { 
+      if (aluno instanceof Aluno || (aluno && aluno.cpf)) { 
+        dados.aluno = aluno; return true; } return false; 
+      },
+    getAluno() { 
+      return this.aluno; 
     }
   }
 

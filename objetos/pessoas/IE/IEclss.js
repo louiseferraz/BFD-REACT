@@ -1,4 +1,6 @@
 const PJ = require('../PJ');
+const PF = require('../PF');
+const Aluno = require ('../Aluno');
 
 class IE{
   #numero;
@@ -57,6 +59,35 @@ class IE{
   getPJ(){
     return this.#pj;
   }
+
+  #pf;
+  setPF(pf){
+    if(pf){
+      this.#pf = pf;
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  getPF(){
+    return this.#pf;
+  }
+
+  #aluno;
+  setAluno(aluno){
+    if(aluno){
+      this.#aluno = aluno;
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  getAluno(){
+    return this.#aluno;
+  }
+
 }
 
 module.exports = IE;

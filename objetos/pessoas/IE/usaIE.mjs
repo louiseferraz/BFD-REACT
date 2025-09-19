@@ -1,9 +1,14 @@
 import IEfunc, { IEclss, IEjson } from './IE.mjs';
 import PJ from '../PJ.js';
+import PF from '../PF.js';
+import Aluno from '../Aluno.js';
 
 const agora = new Date();
 const pj = new PJ();
+const pf = new PF();
+const aluno = new Aluno();
 pj.setCNPJ('12.345.678/0001-99');
+pf.setCPF('12345678910');
 
 const ieC = new IEclss(); 
 ieC.setNumero('111'); 
