@@ -3,6 +3,7 @@ import AlunoDAO from './pessoas/DAOs/AlunoDAO.mjs';
 import Endereco from './pessoas/Endereco.js';
 import Telefone from './pessoas/Telefone.js';   
 import IE from './pessoas/IE/IEclss.js';
+import Titulo from './pessoas/Titulo.js';
 
 const aluno = new Aluno();
 aluno.setNome("Pedro");
