@@ -6,7 +6,7 @@ class Telefone{
   //Relacionamento N-N Pessoa
   #pessoas = [];
 
-  addPessoa(pessoa){
+  setPessoa(pessoa){
     if(pessoa){
       this.#pessoas.push(pessoa); 
       return true;
