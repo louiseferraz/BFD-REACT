@@ -20,8 +20,12 @@ export default class AlunoDAO{
         return{
           nome: this.#aluno.getNome(),
           email: this.#aluno.getEmail(),
-          cnpj: this.#aluno.getCPF(),
-          titulo: this.#aluno.getTitulo(),
+          cpf: this.#aluno.getCPF(),
+          titulo: {
+            numero: this.#aluno.getTitulo().getNumero(),
+            zona: this.#aluno.getTitulo().getZona(),
+            secao: this.#aluno.getTitulo().getSecao(),
+          },
           matricula: this.#aluno.getMatricula(),
           curso: this.#aluno.getCurso(),
           endereco: {

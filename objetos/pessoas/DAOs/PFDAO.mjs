@@ -20,8 +20,12 @@ export default class PFDAO{
         return{
           nome: this.#pf.getNome(),
           email: this.#pf.getEmail(),
-          cnpj: this.#pf.getCPF(),
-          titulo: this.#pf.getTitulo(),
+          cpf: this.#pf.getCPF(),
+          titulo: {
+            numero: this.#pf.getTitulo().getNumero(),
+            zona: this.#pf.getTitulo().getZona(),
+            secao: this.#pf.getTitulo().getSecao(),
+          },
           endereco: {
             logradouro: this.#pf.getEndereco().getLogradouro(),
             cep: this.#pf.getEndereco().getCep(),
