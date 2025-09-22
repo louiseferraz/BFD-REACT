@@ -31,12 +31,6 @@ fone2.setDdd("62");
 fone2.setNumero("99999-7777");
 pf.addTelefone(fone2);
 
-const ie = new IE();
-ie.setNumero('123456');
-ie.setEstado('SP');
-ie.setDataRegistro(new Date());
-pf.setIE(ie);
-
 const pfdao = new PFDAO(pf);
 
 var x = pfdao.toJSON();

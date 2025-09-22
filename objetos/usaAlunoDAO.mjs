@@ -2,7 +2,6 @@ import Aluno from './pessoas/Aluno.js';
 import AlunoDAO from './pessoas/DAOs/AlunoDAO.mjs';
 import Endereco from './pessoas/Endereco.js';
 import Telefone from './pessoas/Telefone.js';   
-import IE from './pessoas/IE/IEclss.js';
 import Titulo from './pessoas/Titulo.js';
 
 const aluno = new Aluno();
@@ -16,7 +15,7 @@ const tit = new Titulo();
 tit.setNumero("1234567891010");
 tit.setZona("123");
 tit.setSecao("1234");
-pf.setTitulo(tit);
+aluno.setTitulo(tit);
 
 
 const end = new Endereco();
@@ -33,12 +32,6 @@ const fone2 = new Telefone();
 fone2.setDdd("62");
 fone2.setNumero("99999-7777");
 aluno.addTelefone(fone2);
-
-const ie = new IE();
-ie.setNumero('123456');
-ie.setEstado('SP');
-ie.setDataRegistro(new Date());
-aluno.setIE(ie);
 
 const alunodao = new AlunoDAO(aluno);
 

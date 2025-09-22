@@ -6,7 +6,7 @@ class Aluno extends PF{
   
   setMatricula(matricula){
     if(matricula){
-      if((matricula.length===8) && (matricula.startswith('20'))){
+      if(matricula.length===8){
       this.#matricula = matricula;
       return true;}
       else{

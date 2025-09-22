@@ -27,11 +27,6 @@ export default class PFDAO{
             cep: this.#pf.getEndereco().getCep(),
           },
           telefone: fones,
-          ie:{
-            numero: this.#pf.getIE().getNumero(),
-            estado: this.#pf.getIE().getEstado(),
-            dataRegistro: this.#pf.getIE().getDataRegistro(),
-          }
         };
     }
 

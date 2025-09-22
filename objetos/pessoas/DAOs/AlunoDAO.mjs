@@ -1,7 +1,7 @@
 import {localStorage} from './localStorage.mjs';
 import Aluno from '../Aluno.js';
 
-export default class Aluno{
+export default class AlunoDAO{
     #aluno;
     constructor(aluno){
         if(aluno instanceof Aluno){
@@ -29,11 +29,6 @@ export default class Aluno{
             cep: this.#aluno.getEndereco().getCep(),
           },
           telefone: fones,
-          ie:{
-            numero: this.#aluno.getIE().getNumero(),
-            estado: this.#aluno.getIE().getEstado(),
-            dataRegistro: this.#aluno.getIE().getDataRegistro(),
-          }
         };
     }
 
